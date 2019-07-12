@@ -2,9 +2,9 @@ import React from 'react';
 import todos from '../reducers';
 import { connect } from 'react-redux';
 
-
+// build a display function
 const DisplayTodos = props => {
-    console.log('display', props.todoList)
+    // console.log('display', props.todoList)
     return (
         <div className="list">
             <ul>
@@ -13,6 +13,7 @@ const DisplayTodos = props => {
                     (props.todoList === undefined)
                  ? <div>Add to the Todo List here</div>
                   : <ul>
+                      {/* map the todo array and add to a list */}
                       {props.todoList.map(todo => {
                     return(
                         <li>{todo}</li>
